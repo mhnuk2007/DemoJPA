@@ -2,7 +2,7 @@
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
     <persistence-unit name="StudentPU">
         <!-- You can skip <provider> to allow auto-discovery -->
-        <class>com.example.Student</class> <!-- Register your entity class -->
+        <class>com.learning.Student</class> <!-- Register your entity class -->
 
         <properties>
             <!-- Standard JPA JDBC settings -->
@@ -12,7 +12,7 @@
             <property name="jakarta.persistence.jdbc.password" value="0000"/>
 
             <!-- Standard schema generation (JPA-only) -->
-            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
 
             <!-- Optional: Logging via standard JDBC logging (not Hibernate's show_sql) -->
             <property name="jakarta.persistence.logging.jdbc.level" value="INFO"/>
