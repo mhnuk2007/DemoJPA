@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="StudentPU">
+        <!-- You can skip <provider> to allow auto-discovery -->
+        <class>com.example.Student</class> <!-- Register your entity class -->
+
+        <properties>
+            <!-- Standard JPA JDBC settings -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/demo1"/>
+            <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.password" value="0000"/>
+
+            <!-- Standard schema generation (JPA-only) -->
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+
+            <!-- Optional: Logging via standard JDBC logging (not Hibernate's show_sql) -->
+            <property name="jakarta.persistence.logging.jdbc.level" value="INFO"/>
+        </properties>
+    </persistence-unit>
+
+
+</persistence>
